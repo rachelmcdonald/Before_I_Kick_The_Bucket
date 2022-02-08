@@ -53,4 +53,6 @@ def create_country():
 @countries_blueprint.route("/country/<id>/delete", methods=['POST'])
 def delete_country(id):
     country_repository.delete(id)
+    print(f"Delete{id}")
     return redirect('/country')
+
