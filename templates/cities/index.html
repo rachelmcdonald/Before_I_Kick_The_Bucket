@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Cities</h1>
+<h3>The cities I am currently traveling through!</h3>
+  <ul>
+      {% for city in cities %}
+      <li>
+        <p> {{ city.name }} </p>
+        {% if city.visited == True %} Visited {% endif %}
+        {% if city.visited == False %} Still to Visit {% endif %}
+        <p>
+        <form action="/cities/{{ city.id }}/delete" method="POST">
+          <input class="btn btn--danger" type="submit" value="delete" />
+        </form>
+        </p>
+      </li>
+        {% endfor %}
+  </ul>
+<a href='/cities/new'>
+    <button class="btn">
+        Add New City
+    </button>
+</a>
+<a href='/cities/edit'>
+    <button class="btn">
+        Edit Cities
+    </button>
+</a>
+{% endblock %}

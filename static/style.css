@@ -57,6 +57,14 @@ h3 {
     padding: 10px;
 }
 
+p {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color:#1F7A8C;
+    padding: 10px; 
+}
+
 .name {
     font-weight: bold;
     margin-bottom: 0.5em;

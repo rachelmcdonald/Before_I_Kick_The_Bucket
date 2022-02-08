@@ -1,11 +1,12 @@
 from db.run_sql import run_sql
 from models.city import City
 from models.country import Country
+from repositories import country_repository
 
 
 def save(city):
-    sql = "INSERT INTO cities(name, visited, country(id)) VALUES ( %s, %s, %s ) RETURNING id"
-    values = [city.name, city.visited, city.country(id)]
+    sql = "INSERT INTO cities(name, country_id, visited) VALUES ( %s, %s, %s ) RETURNING id"
+    values = [city.name, city.country.id, city.visited]
     results = run_sql( sql, values )
     city.id = results[0]['id']
     return city
@@ -18,7 +19,8 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        city = City(row['name'], row['visited'], row['country(id)'], row['id'])
+        country = country_repository.select(row['country_id'])
+        city = City(row['name'], row['visited'], country, row['id'])
         cities.append(city)
     return cities
 

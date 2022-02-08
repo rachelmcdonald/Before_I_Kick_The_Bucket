@@ -2,17 +2,20 @@
 
 {% block content %}
 <h1>Countries</h1>
-<h3>The countries I have visited so far!</h3>
+<h3>The countries I am currently traveling through!</h3>
   <ul>
       {% for country in countries %}
       <li>
-        <p>{{ country.id }} {{ country.name }} </p>
+        <p> {{ country.name }} </p>
         {% if country.visited == True %} Visited {% endif %}
         {% if country.visited == False %} Still to Visit {% endif %}
         <p>
         <form action="/country/{{ country.id }}/delete" method="POST">
           <input class="btn btn--danger" type="submit" value="delete" />
         </form>
+        <!-- <form action="/country/{{ country.id }}/edit" method="POST">
+          <input class="btn" type="submit" value="delete" />
+        </form> -->
         </p>
       </li>
         {% endfor %}

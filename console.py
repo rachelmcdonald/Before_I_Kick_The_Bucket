@@ -15,11 +15,11 @@ country_repository.save(country2)
 
 country_repository.select_all()
 
-# city1 = City("Perth")
-# city_repository.save(city1)
+city1 = City("Perth", country1, True)
+city_repository.save(city1)
 
-# city2 = City("Rome")
-# city_repository.save(city2)
+city2 = City("Rome", country2, False)
+city_repository.save(city2)
 
 
 pdb.set_trace()
