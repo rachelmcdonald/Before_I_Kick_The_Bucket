@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Countries</h1>
+<h3>The countries I have visited so far!</h3>
+<div class="country-list">
+  <ul>
+      {% for country in countries %}
+      <li>
+        <p>{{ country.name }} - {{ country.id }}</p>
+        <p>
+        <form action="/country/{{ country.id }}/delete" method="POST">
+          <input class="btn btn--danger" type="submit" value="delete" />
+        </form>
+        </p>
+      </li>
+        {% endfor %}
+  </ul>
+</div>
+<a href='/country/new'>
+    <button class="btn">
+        Add New Country
+    </button>
+</a>
+<a href='/country/edit'>
+    <button class="btn">
+        Edit Countries
+    </button>
+</a>
+{% endblock %}

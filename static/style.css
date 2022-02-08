@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Nunito:wght@400;457;832&display=swap');
+
+body {
+    background-color: #CFFCFF;
+}
+
+.menu{
+    display: flex;
+    padding: 10px;
+    background-color: #AAEFDF;
+    color: white;
+}
+  
+.menu li a{
+    text-decoration: none;
+}
+  
+.menu li a:visited{
+   color: white;
+}
+
+.menu li a:hover{
+    color: #1F7A8C;
+    transition: .5s;
+}
+  
+.menu li{
+    padding-right: 10px;
+    list-style: none;
+    color: white;
+    font-family: "Helvetica", arial, sans-serif; font-size: 14px;
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 832;
+    font-size: 60px;
+    color:#1F7A8C;
+    border: 2px solid rgb(77, 205, 196);
+    border-radius: 30px;
+    padding: 10px;
+}
+
+h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 457;
+    font-size: 40px;
+    color:#1F7A8C;
+    padding: 10px;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color:#1F7A8C;
+    padding: 10px;
+}
+
+.name {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    margin-right: 0.3em;
+}
+
+
+
+.btn {
+    border:1px rgb(10, 111, 138) solid;
+    border-radius: 6px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #4aa0b1;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background-color:rgb(3, 7, 65);
+    color: #FFF;
+    opacity: 50%;
+    transition: .5s;
+}
+  
+/* .btn--danger {
+    background-color: #C33C54;
+}
+  
+.btn--danger:hover {
+    background-color: #730000;
+} */
+  
+.btn--action:hover {
+    background-color: #ABC798;
+}
+
+
+/* .buttons, .btn {
+    margin-top: 10px;
+    margin-left: 2px;
+    font-size: 1.4em;
+    background-color: #1F7A8C;
+    color: #FFF;
+    border-radius: 7px;
+    padding: 5px;
+}
+  
+.buttons, .btn i {
+    width: 80px;
+} */
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.country-list {
+    display: inline-block;
+}
