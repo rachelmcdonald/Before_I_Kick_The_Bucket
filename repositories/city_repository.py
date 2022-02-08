@@ -32,7 +32,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        city = City(result['name'], result['visited'], result['country(id)'], result['id'] )
+        city = City(result['name'], result['visited'], result['country_id'], result['id'] )
     return city
 
 

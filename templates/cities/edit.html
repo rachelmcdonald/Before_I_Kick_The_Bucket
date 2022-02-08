@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+
+<form action="/cities/{{city.id}}" method="post">
+  <div>
+    <label for="location">New Name:</label>
+    <input type="text" id="location" name="location" value="{{city.location}}" placeholder="Type name of city" required autofocus>
+  </div>
+
+  <div>
+    <label for="visited">Visited:</label>
+    <select id="visited" name="visited">
+
+      <option value="true"
+        {% if country.visited == True %} selected="selected" {% endif %}>
+        Visited
+      </option>
+
+      <option value="false"
+        {% if country.visited == False %} selected="selected" {% endif %}>
+        Still to Visit
+      </option>
+
+    </select>
+  </div>
+
+
+  <div>
+    <label for="city">Choose city to edit:</label>
+    <select id="city" name="country_id">
+      {% for city in all_cities %}
+        <option value="{{ city.name }}"
+          {% if country.id== city.name %} selected="selected"{% endif %}>
+          {{ city.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+
+
+  <button type="submit">Update City</button>
+
+</form>
+
+{% endblock %}

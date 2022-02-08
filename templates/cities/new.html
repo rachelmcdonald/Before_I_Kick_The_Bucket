@@ -8,6 +8,15 @@
   </div>
 
   <div>
+    <label for="country">Country:</label>
+          <select name="country_id" id="country">
+            {% for country in countries %}
+             <option value="{{ country.id }}">{{ country.name }}</option>
+            {% endfor %}
+          </select>
+    </div>
+  
+    <div>
     <label for="visited">Visited:</label>
     <select id="visited" name="visited">
       <option value="true">Visited</option>
