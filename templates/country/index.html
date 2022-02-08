@@ -3,11 +3,12 @@
 {% block content %}
 <h1>Countries</h1>
 <h3>The countries I have visited so far!</h3>
-<div class="country-list">
   <ul>
       {% for country in countries %}
       <li>
-        <p>{{ country.name }} - {{ country.id }}</p>
+        <p>{{ country.id }} {{ country.name }} </p>
+        {% if country.visited == True %} Visited {% endif %}
+        {% if country.visited == False %} Still to Visit {% endif %}
         <p>
         <form action="/country/{{ country.id }}/delete" method="POST">
           <input class="btn btn--danger" type="submit" value="delete" />
@@ -16,7 +17,6 @@
       </li>
         {% endfor %}
   </ul>
-</div>
 <a href='/country/new'>
     <button class="btn">
         Add New Country

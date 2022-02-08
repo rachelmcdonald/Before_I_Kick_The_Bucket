@@ -4,8 +4,8 @@ from models.country import Country
 
 
 def save(country):
-    sql = "INSERT INTO countries( name ) VALUES ( %s ) RETURNING id"
-    values = [country.name]
+    sql = "INSERT INTO countries( name, visited ) VALUES ( %s, %s ) RETURNING id"
+    values = [country.name, country.visited]
     results = run_sql( sql, values )
     country.id = results[0]['id']
     return country
@@ -29,7 +29,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        country = Country(result['name'], result['id'] )
+        country = Country(result['name'], result['visited'], result['id'] )
     return country
 
 

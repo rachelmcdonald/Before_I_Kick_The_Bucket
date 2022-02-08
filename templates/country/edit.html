@@ -3,7 +3,7 @@
 
 <form action="/country/{{country.id}}" method="post">
   <div>
-    <label for="location">Name of country:</label>
+    <label for="location">New Name:</label>
     <input type="text" id="location" name="location" value="{{country.location}}" placeholder="Type name of country" required autofocus>
   </div>
 
@@ -13,16 +13,30 @@
 
       <option value="true"
         {% if country.visited == True %} selected="selected" {% endif %}>
-        True
+        Visited
       </option>
 
       <option value="false"
         {% if country.visited == False %} selected="selected" {% endif %}>
-        False
+        Still to Visit
       </option>
 
     </select>
   </div>
+
+
+  <div>
+    <label for="country">Choose country to edit:</label>
+    <select id="country" name="country_id">
+      {% for country in all_countries %}
+        <option value="{{ country.id }}"
+          {% if country.id== country.id %} selected="selected"{% endif %}>
+          {{ country.name }}
+        </option>
+      {% endfor %}
+    </select>
+  </div>
+
 
   <button type="submit">Update Country</button>
 
