@@ -2,28 +2,28 @@
 
 {% block content %}
 <h1>Cities</h1>
-<h3>The cities I am currently traveling through!</h3>
+<h3>The cities I am currently traveling through! &#128506;</h3>
   <ul>
       {% for city in cities %}
       <li>
         <p> {{ city.name }} </p>
-        {% if city.visited == True %} Visited {% endif %}
-        {% if city.visited == False %} Still to Visit {% endif %}
+        {% if city.visited == True %} <p>Visited</p> {% endif %}
+        {% if city.visited == False %} <p>Still to Visit</p> {% endif %}
         <p>
         <form action="/cities/{{ city.id }}/delete" method="POST">
-          <input class="btn btn--danger" type="submit" value="delete" />
+          <input class="btn btn--danger" type="submit" value="Remove" />
         </form>
         </p>
       </li>
         {% endfor %}
   </ul>
 <a href='/cities/new'>
-    <button class="btn">
+    <button class="button btn">
         Add New City
     </button>
 </a>
 <a href='/cities/edit'>
-    <button class="btn">
+    <button class="button btn">
         Edit Cities
     </button>
 </a>

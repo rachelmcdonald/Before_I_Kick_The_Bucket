@@ -10,8 +10,32 @@ input, select, button {
     padding: 10px;
     margin: 10px;
     box-sizing: border-box;
+    cursor: pointer;
 }
 
+#checked {
+    border: 2px solid rgb(80, 255, 80);
+    border-radius: 40px;
+    color: rgb(11, 132, 11);
+    font-weight: 500;
+}
+
+#unchecked { 
+    border: 2px solid rgb(220, 126, 68);
+    border-radius: 40px;
+    color: rgb(207, 100, 0);
+    font-weight: 500;
+}
+
+label {
+    font-family: "Helvetica", arial, sans-serif; 
+    font-size: 14px;
+}
+
+
+li {
+    list-style: none;
+}
 .menu{
     display: flex;
     padding: 10px;
@@ -36,7 +60,8 @@ input, select, button {
     padding-right: 10px;
     list-style: none;
     color: white;
-    font-family: "Helvetica", arial, sans-serif; font-size: 14px;
+    font-family: "Helvetica", arial, sans-serif; 
+    font-size: 14px;
 }
 
 h1 {
@@ -79,51 +104,40 @@ p {
     margin-right: 0.3em;
 }
 
-
-
-.btn {
+.btn, button {
     border:1px rgb(10, 111, 138) solid;
     border-radius: 6px;
-    padding: 10px 15px;
+    width : 100%;
+    padding: 10px;
+    margin: 10px;
     font-size: 14px;
     color: #FFFFFF;
     background-color: #4aa0b1;
     cursor:pointer;
 }
 
-.btn:hover{
+.btn:hover, button:hover{
     background-color:rgb(3, 7, 65);
     color: #FFF;
     opacity: 50%;
     transition: .5s;
 }
   
-/* .btn--danger {
+.btn--danger {
     background-color: #C33C54;
 }
   
 .btn--danger:hover {
     background-color: #730000;
-} */
+}
   
 .btn--action:hover {
     background-color: #ABC798;
 }
-
-
-/* .buttons, .btn {
-    margin-top: 10px;
-    margin-left: 2px;
-    font-size: 1.4em;
-    background-color: #1F7A8C;
-    color: #FFF;
-    border-radius: 7px;
-    padding: 5px;
-}
-  
-.buttons, .btn i {
+ 
+.buttons i {
     width: 80px;
-} */
+} 
 
 .container{
     display: flex;
