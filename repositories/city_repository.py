@@ -5,8 +5,8 @@ from repositories import country_repository
 
 
 def save(city):
-    sql = "INSERT INTO cities(name, country_id, visited) VALUES ( %s, %s, %s ) RETURNING id"
-    values = [city.name, city.country.id, city.visited]
+    sql = "INSERT INTO cities(name, visited, country_id) VALUES ( %s, %s, %s ) RETURNING id"
+    values = [city.name, city.visited, city.country_id]
     results = run_sql( sql, values )
     city.id = results[0]['id']
     return city
@@ -20,7 +20,7 @@ def select_all():
 
     for row in results:
         country = country_repository.select(row['country_id'])
-        city = City(row['name'], row['visited'], country, row['id'])
+        city = City(row['name'], country, row['visited'], row['id'])
         cities.append(city)
     return cities
 
@@ -31,8 +31,11 @@ def select(id):
     values = [id]
     result = run_sql(sql, values)[0]
 
+    for row in result:
+        country = country_repository.select(row['country_id'])
+
     if result is not None:
-        city = City(result['name'], result['visited'], result['country_id'], result['id'] )
+        city = City(result['name'], country, result['visited'], result['id'] )
     return city
 
 
