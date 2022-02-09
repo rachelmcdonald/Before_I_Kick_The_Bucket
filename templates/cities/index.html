@@ -10,26 +10,26 @@
         {% if city.visited == True %} <p id="checked">Visited &#9989;</p> {% endif %}
         {% if city.visited == False %} <p id="unchecked">Still to Visit &#129523;</p> {% endif %}
         <p>
-        <form action="/cities/{{ city.id }}/delete" method="POST">
-          <input class="btn btn--danger" type="submit" value="Remove" />
-        </form>
-        <a href="/cities/{{ city.id }}/edit">
-          <button class="btn">
-              Edit Details
-          </button>
-        </a>  
+          <form action="/cities/{{ city.id }}/delete" method="POST">
+            <input class="btn button btn--danger" type="submit" value="Remove" />
+          </form>
+            <a href="/cities/{{ city.id }}/edit">
+              <button class="btn button">
+                 Edit Details
+              </button>
+            </a>  
         </p>  
       </li>
         {% endfor %}
   </ul>
-<a href='/cities/new'>
-    <button class="button btn">
-        Add New City
-    </button>
-</a>
-<a href='/country'>
-    <button class="button btn">
-        View Countries
-    </button>
-</a>
+        <a href='/cities/new'>
+          <button class="btn button">
+            Add New City
+          </button>
+        </a>
+        <a href='/country'>
+          <button class="btn button">
+             View Countries
+          </button>
+        </a>
 {% endblock %}
