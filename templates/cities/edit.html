@@ -28,7 +28,7 @@
   <div>
     <label for="city">Choose city to edit:</label>
     <select id="city" name="country_id">
-      {% for city in all_cities %}
+      {% for city in cities %}
         <option value="{{ city.name }}"
           {% if country.id== city.name %} selected="selected"{% endif %}>
           {{ city.name }}

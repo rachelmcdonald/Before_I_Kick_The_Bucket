@@ -9,7 +9,7 @@ cities_blueprint = Blueprint("cities", __name__)
 @cities_blueprint.route("/cities")
 def cities():
     cities = city_repository.select_all() # NEW
-    return render_template("cities/index.html", all_cities = cities)
+    return render_template("cities/index.html", cities = cities)
 
 
 # NEW
@@ -17,7 +17,7 @@ def cities():
 @cities_blueprint.route("/cities/new", methods=['GET'])
 def new_city():
     cities = city_repository.select_all()
-    return render_template("cities/new.html", all_cities = cities)
+    return render_template("cities/new.html", cities = cities)
 
 
 # CREATE

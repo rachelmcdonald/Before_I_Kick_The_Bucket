@@ -28,7 +28,7 @@
   <div>
     <label for="country">Choose country to edit:</label>
     <select id="country" name="country_id">
-      {% for country in all_countries %}
+      {% for country in countries %}
         <option value="{{ country.id }}"
           {% if country.id== country.id %} selected="selected"{% endif %}>
           {{ country.name }}
