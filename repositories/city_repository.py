@@ -6,7 +6,7 @@ from repositories import country_repository
 
 def save(city):
     sql = "INSERT INTO cities(name, visited, country_id) VALUES ( %s, %s, %s ) RETURNING id"
-    values = [city.name, city.visited, city.country_id]
+    values = [city.name, city.visited, city.country.id]
     results = run_sql( sql, values )
     city.id = results[0]['id']
     return city
@@ -48,8 +48,8 @@ def delete(id):
 
 
 def update(city):
-    sql = "UPDATE cities SET (name, visited) = (%s, %s) WHERE id = %s"
-    values = [city.name, city.visited, city.id]
+    sql = "UPDATE cities SET (name, visited, country_id) = (%s, %s, %s) WHERE id = %s"
+    values = [city.name, city.visited, city.country.id, city.id]
     run_sql(sql, values)
 
 def cities(city):

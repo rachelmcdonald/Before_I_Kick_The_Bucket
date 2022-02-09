@@ -3,24 +3,25 @@
 
 <form action="/cities" method="post">
   <div>
-    <label for="newcity">Name of City:</label>
-    <input type="text" id="newcity" name="newcity" placeholder="Add new city" required autofocus>
+    <label for="name">Name of City:</label>
+    <input type="text" id="name" name="name" placeholder="Add new city" required autofocus>
   </div>
-
-  <div>
-    <label for="country">Country:</label>
-          <select name="country_id" id="country">
-            {% for country in countries %}
-             <option value="{{ country.id }}">{{ country.name }}</option>
-            {% endfor %}
-          </select>
-    </div>
   
     <div>
     <label for="visited">Visited:</label>
     <select id="visited" name="visited">
       <option value="true">Visited</option>
       <option value="false">Still to Visit</option>
+    </select>
+  </div>
+
+  <div>
+    <select id="country" name="country_id">
+      {% for country in countries %}
+        <option value="{{ country.id }}">
+          {{ country.name }}
+        </option>
+      {% endfor %}
     </select>
   </div>
 

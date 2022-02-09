@@ -21,11 +21,11 @@ def edit_country(id):
     return render_template('country/edit.html', country = country)
 
  # PUT '/tasks/<id>'
-@countries_blueprint.route("/country/<id>/edit", methods=['POST'])
+@countries_blueprint.route("/country/<id>", methods=['POST'])
 def update_country(id):
-    location = request.form['location']
+    name = request.form['name']
     visited  = request.form['visited']
-    country  = Country(location, visited)
+    country  = Country(name, visited, id)
     country_repository.update(country)
     return redirect('/country')  
 

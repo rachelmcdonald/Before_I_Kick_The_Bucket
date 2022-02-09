@@ -3,9 +3,9 @@ from models.country import Country
 
 class City:
 
-    def __init__(self, name, country_id, visited = False, id = None,):
+    def __init__(self, name, country, visited = False, id = None,):
         self.name = name
-        self.country = country_id
+        self.country = country
         self.visited = visited
         self.id = id
 
