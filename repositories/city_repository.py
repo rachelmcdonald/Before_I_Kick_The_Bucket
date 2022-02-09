@@ -30,9 +30,7 @@ def select(id):
     sql = "SELECT * FROM cities WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-
-    for row in result:
-        country = country_repository.select(row['country_id'])
+    country = country_repository.select(result['country_id'])
 
     if result is not None:
         city = City(result['name'], country, result['visited'], result['id'] )

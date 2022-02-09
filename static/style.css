@@ -32,7 +32,6 @@ label {
     font-size: 14px;
 }
 
-
 li {
     list-style: none;
 }
@@ -70,6 +69,7 @@ h1 {
     font-size: 60px;
     color:#1F7A8C;
     border: 2px solid rgb(77, 205, 196);
+    box-shadow: 10px 5px 5px rgb(12, 86, 136);
     border-radius: 30px;
     padding: 10px;
 }

@@ -41,8 +41,9 @@ def show(id):
 # GET
 @cities_blueprint.route("/cities/<id>/edit", methods=['GET'])
 def edit_city(id):
+    countries = country_repository.select_all()
     city = city_repository.select(id)
-    return render_template('cities/edit.html', city = city)
+    return render_template('cities/edit.html', city = city, countries = countries)
 
 # UPDATE
 # PUT '/tasks/<id>'

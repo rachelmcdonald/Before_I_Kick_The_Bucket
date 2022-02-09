@@ -12,12 +12,12 @@
     <select id="visited" name="visited">
 
       <option value="true"
-        {% if country.visited == True %} selected="selected" {% endif %}>
+        {% if city.visited == True %} selected="selected" {% endif %}>
         Visited
       </option>
 
       <option value="false"
-        {% if country.visited == False %} selected="selected" {% endif %}>
+        {% if city.visited == False %} selected="selected" {% endif %}>
         Still to Visit
       </option>
 
@@ -26,12 +26,11 @@
 
 
   <div>
-    <label for="city">Choose city to edit:</label>
-    <select id="city" name="country_id">
-      {% for city in cities %}
-        <option value="{{ city.name }}"
-          {% if country.id== city.name %} selected="selected"{% endif %}>
-          {{ city.name }}
+    <select id="country" name="country_id">
+      {% for country in countries %}
+        <option value="{{ country.id }}"
+          {% if country.id== city.country.id %} selected="selected"{% endif %}>
+          {{ country.name }}
         </option>
       {% endfor %}
     </select>
