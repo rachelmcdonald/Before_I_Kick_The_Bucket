@@ -6,14 +6,19 @@
   <ul>
       {% for city in cities %}
       <li>
-        <p> {{ city.name }} </p>
+        <p>&#128205; {{ city.name }} </p>
         {% if city.visited == True %} <p id="checked">Visited &#9989;</p> {% endif %}
         {% if city.visited == False %} <p id="unchecked">Still to Visit &#129523;</p> {% endif %}
         <p>
         <form action="/cities/{{ city.id }}/delete" method="POST">
           <input class="btn btn--danger" type="submit" value="Remove" />
         </form>
-        </p>
+        <a href="/cities/{{ city.id }}/edit">
+          <button class="btn">
+              Edit Details
+          </button>
+        </a>  
+        </p>  
       </li>
         {% endfor %}
   </ul>
