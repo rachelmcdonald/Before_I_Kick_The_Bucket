@@ -1,6 +1,7 @@
 #First CodeClan Project: A Travel Bucket List Web Application
 
 ##Set Up
+
 ###To Run the Application:
 - cd into 'travel_bucletlist_project' and the type 'code .' to open in the code editor.
 - With the 'travel_bucketlist_python_project' file opened in VSCode, open your terminal and run 'flask run'.
@@ -68,10 +69,10 @@ I used the same logic, but for 'cities' rather than 'countries' within my HTML t
 'city.country.id' where I was able to display the country to which the city belongs. I also added a drop down menu within the 'Cities' page to allow the
 user to select a 'country' from the already added 'Countries' page where they wished to link the city to. This was achieved by adding a Python 'for' loop
 into the HTML code.
-<img width="501" alt="Screenshot 2022-02-10 at 16 52 57" src="https://user-images.githubusercontent.com/64783968/153460956-da401e3e-9137-487a-b745-4364efe27c98.png">
-<img width="497" alt="Screenshot 2022-02-1<img width="501" alt="Screenshot 2022-02-10 at 16 53 23" src="https://user-images.githubusercontent.com/64783968/153461020-3615f83a-1e28-4a86-8721-467517b97933.png">
-0 at 16 53 10" src="https://user-images.githubusercontent.com/64783968/153460980-994a8774-d821-4f72-a9e7-0aac4d7ecb09.png">
-<img width="672" alt="Screenshot 2022-02-10 at 17 16 17" src="https://user-images.githubusercontent.com/64783968/153461132-34a5fcd4-bc3b-4c9a-baf6-d01d97cc77c8.png">
+<img width="501" alt="Screenshot 2022-02-10 at 16 52 57" src="https://user-images.githubusercontent.com/64783968/153461677-33c4da4b-bfe7-4361-9774-ddf7683450ad.png">
+<img width="497" alt="Screenshot 2022-02-10 at 16 53 10" src="https://user-images.githubusercontent.com/64783968/153461712-011cc93b-6e7d-443e-96fe-25546c0a4ca1.png">
+<img width="500" alt="Screenshot 2022-02-10 at 17 02 15" src="https://user-images.githubusercontent.com/64783968/153461752-acc782cd-9c91-4c17-9edf-9ad129a87dcc.png">
+<img width="672" alt="Screenshot 2022-02-10 at 17 16 17" src="https://user-images.githubusercontent.com/64783968/153461783-597e8c89-9cb1-45b1-982d-1d3ad92b9ab3.png">
 
 
 
