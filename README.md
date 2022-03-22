@@ -3,7 +3,7 @@
 ##Set Up
 
 ###To Run the Application:
-- cd into 'travel_bucletlist_project' and the type 'code .' to open in the code editor.
+- cd into 'travel_bucketlist_project' and the type 'code .' to open in the code editor.
 - With the 'travel_bucketlist_python_project' file opened in VSCode, open your terminal and run 'flask run'.
 - CMD + click on the link that appears within the terminal to view the application on a local host within your browser.
 
