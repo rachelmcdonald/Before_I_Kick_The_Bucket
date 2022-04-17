@@ -32,7 +32,7 @@ I will come back and update with extensions when I have some more time after the
 
 ##Technologies:
 - Flask
-- pyscopg2
+- psycopg2
 - SQL
 - Python
 - HTML
